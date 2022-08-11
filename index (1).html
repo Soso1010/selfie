@@ -1,0 +1,79 @@
+<!--Esse arquivo HTML tem links bootstrap, nossos links para os arquivos style.css e main.js
+e alguns códigos que você já conhece!-->
+
+<html>
+
+    <head>
+
+        <title>App Minha selfie</title>
+        
+        <!--links bootstrap-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <!--link CSS-->
+        <link href="style.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    </head>
+ 
+    <body>
+
+        <div class="container">
+            
+            <center>
+        
+                <!--adicione uma tag âncora que será usada para fazer o download da selfie. Essa tag âncora terá href vazio, pois
+                iremos atualizar isso com o link selfie do javascript nas próximas aulas, id="link" e download="myselfie.png"-->
+                <a href="" id="link" download="myselfie.png"></a>
+
+                <h1>App Selfie por voz 
+                    <!--adicione uma tag img, com a id="logo_img" e src contendo o nome do arquivo de foto à sua escolha
+                    (você pode usar uma foto sua)-->
+                    <img id="logo_img" src="minhafoto.jpg">
+
+                </h1>
+
+                <hr>
+                
+                <h4 style="color:red;">Pressione permitir assim que o pop-up for exibido. Depois de dar um comando de voz</h4>
+        
+                <div class="form-group">
+                    
+                    <h3>Diga "Tire minha selfie"</h3>
+                    <label>Sua saída de voz : </label>
+                    <!--adicione uma textarea, ela será usada para conter o texto, que é convertido do nosso áudio. Ela terá
+                    class="form-control", id="textbox" e readonly="true"-->
+                    <textarea class="form-control" id="textbox" reandonly="true"></textarea>
+
+
+                </div>
+
+                <!--adicione um botão com class="btn btn-primary" e onclick="start()". O texto do botão será Iniciar-->
+                <button class="btn btn-primary" onclick="start()">Iniciar</button>
+                <p> Pressione o botão Iniciar </p>
+
+                <label>Sua webcam : </label>
+                <!--adicione uma div que será usada para refletir a saída da webcam, sendo assim, terá id="camera"-->
+                <div id="camera"></div>
+
+
+                <br>
+
+                <label>Sua selfie será exibida aqui: </label>
+                <!--adicione uma div que será usada para conter a selfie tirada pela webcam, sendo assim, terá id="result"-->
+                <div id="result"></div>
+
+
+            </center>
+        
+        </div>
+
+        <!--link JS-->
+        <script src="main.js"></script>
+
+    </body>
+
+</html>
